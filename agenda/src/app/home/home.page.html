@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Agenda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="">
+    <ion-label position="floating">Nome</ion-label>
+    <ion-textarea id="nome"></ion-textarea>
+  </ion-item>
+
+  <ion-button (click)="gerenciarContatos()" expand="full" color="light" >
+    Gerenciar Contato
+  </ion-button>
+
+  <ion-card >
+    <ion-row style="background-color: #1ab394; color: white">
+          <ion-col size="12" >Nomes</ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-grid no-padding *ngFor="let item of data">
+    <ion-card>  
+      <ion-row>
+          <ion-col size="12" >{{item.nome}}</ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-grid> 
+
+</ion-content>
